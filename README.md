@@ -106,6 +106,8 @@ No single column is a prediction target — this is unsupervised segmentation.
    categorical values, and turned into a plain-language segment summary — the
    part that actually makes clustering useful to a non-technical stakeholder.
 
+   ![Feature distributions per cluster](assets/cluster_boxplots.png)
+
 6. **Assign a new patient to a segment.** A trained clustering model is only
    useful if new patients can be classified without re-running the whole
    pipeline. The notebook implements a function that computes the Gower-style
@@ -151,7 +153,7 @@ jupyter notebook notebooks/patient_segmentation_analysis.ipynb
 ## Tech stack
 
 Python · pandas · NumPy · scikit-learn · [`gower`](https://pypi.org/project/gower/) ·
-SciPy · seaborn · Matplotlib · Plotly · Jupyter
+SciPy · seaborn · Matplotlib · Jupyter
 
 ## License
 
