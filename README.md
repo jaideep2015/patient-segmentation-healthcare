@@ -83,6 +83,11 @@ No single column is a prediction target — this is unsupervised segmentation.
 
    ![Elbow method plot](assets/elbow_method.png)
 
+   Projected into 2D, the "clusters" it finds aren't really separated at all —
+   just an arbitrary split down one continuous blob of patients:
+
+   ![K-Means clusters in PCA space](assets/kmeans_pca_scatter.png)
+
    The underlying problem isn't the choice of *k* — it's that K-Means relies on
    Euclidean distance, which breaks down on mixed categorical/numeric data:
    one-hot encoding inflates dimensionality, treats every binary column as
